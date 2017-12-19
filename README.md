@@ -25,3 +25,11 @@ Step 4: Serve the application
     
  step 6 :install package below because built in solutions for features including pagination,sortig etc..
    npm install angular-2-data-table --save 
+   
+   See Images:
+    1."assignment.png" -  show all records in the table 
+    2."editrowrecord.png" when click on edit (pencil) enable textbox values
+    3."editmsg.png" after udated record display message 
+    4."delete row.png" First need to click on checkbox .If value is checked then click on"Delete" button.
+       Ask message "Are you sure to delete the recprd"
+    5."deletemsg.png" - if row(s) deleted then dispaly message in the screen for 3 seconds.
