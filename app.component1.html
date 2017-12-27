@@ -1,0 +1,66 @@
+<div *ngIf="iLogin.isLogin">
+  <nav class="navbar navbar-inverse" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand">Shiv Temple
+        </a>
+      </div>
+   	
+      <ul class="nav navbar-nav">
+          <li class="active"><a >{{UserName}}</a>  <!--a href="#">Home</a--></li>
+          <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">सहाय्यक <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a [routerLink] = "['/dailyRegister']">Daily register</a></li>
+              <li><a [routerLink] = "['/supplier']">बिल तयार करा</a></li>	
+              <li><a [routerLink] = "['/labour']">दिवसाचे रजिस्टर</a></li>
+              <li><a [routerLink] = "['/labour']">जमा / खर्च नोंद वही</a></li>
+            </ul>
+          </li>
+          <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="#">व्यवस्थापक <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a [routerLink] = "['/customer']">मशिनचा वापर</a></li>
+              <li><a [routerLink] = "['/supplier']">ऑईल बदलाची दिनांक</a></li>	
+              <li><a [routerLink] = "['/labour']">लेजर</a></li>
+              <li><a [routerLink] = "['/labour']">मशिनचे लेजर रिपोर्ट</a></li>
+            </ul>
+          </li>
+         <li class="dropdown active">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">प्रशासन <span class="caret"></span></a>
+             <ul class="dropdown-menu">
+                 <li><a [routerLink] = "['/customer']">ग्राहकांची नोंद</a></li>
+                 <li><a [routerLink] = "['/supplier']">पुरवठाराची नोंद</a></li>	
+                 <li><a [routerLink] = "['/labour']">कामगारांची नोंद</a></li>
+                 <li><a [routerLink] = "['/createaccount']">खात्यांची नोंद</a></li>	
+                 <li><a [routerLink] = "['/Emp']">Employee</a></li>
+            </ul>	
+         </li>
+        </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a [routerLink] = "['/register']"><span class="glyphicon glyphicon-user"></span> नविन युजर</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in" (click)="LogOut()"></span> Login</a></li>
+      </ul>
+        <!--ul class="nav navbar-nav side-nav" style="height:650px;">
+            <li>
+                <a class="navbar-collapse" ><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li>
+                <a class="navbar-collapse"><i class="fa fa-fw fa-users"></i> Observation Table</a>
+            </li>
+            <li>
+                <a class="navbar-collapse"><i class="fa fa-fw fa-table"></i> Search Report</a>
+            </li> 
+            <li>
+                <a class="navbar-collapse"><i class="fa fa-fw fa-table"></i> Maintain</a>
+            </li>
+            <li>
+                <a class="navbar-collapse"><i class="fa fa-fw fa-table"></i> New User Register</a>
+            </li> 
+        </ul--> 
+    </div>
+  </nav>
+  </div>
+  <router-outlet></router-outlet>
+  
+  <footer *ngIf="iLogin.isLogin">
+     <p>Life Software Labs</p>
+  </footer>
